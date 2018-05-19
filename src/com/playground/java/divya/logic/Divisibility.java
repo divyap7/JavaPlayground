@@ -1,8 +1,8 @@
 package com.playground.java.divya.logic;
 
 public class Divisibility {
-    public void oddBySeven() {
-        for (int i = 1; i <= 1000; i++) {
+    private void oddBySeven(int x,int y) {
+        for (int i = x; i <= y; i++) {
             if ((i % 2 != 0) && (i % 7 == 0)) {
                 System.out.println(i);
             }
@@ -12,6 +12,6 @@ public class Divisibility {
     public static void main(String[] args) {
         System.out.println("The numbers are: ");
         Divisibility result = new Divisibility();
-        result.oddBySeven();
+        result.oddBySeven(2,100);
     }
 }
