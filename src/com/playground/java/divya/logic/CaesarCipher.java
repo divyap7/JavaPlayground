@@ -4,7 +4,7 @@ public class CaesarCipher {
     private void encode(String word)
 
     {
-        String encrypted = "";
+        String encryptedMessage = "";
         for (int i = 0; i < word.length(); i++) {
             int letter = word.charAt(i);
             if (Character.isUpperCase(letter)) {
@@ -16,9 +16,9 @@ public class CaesarCipher {
                 if (letter > 'z')
                     letter = letter - 26;
             }
-            encrypted += (char) letter;
+            encryptedMessage += (char) letter;
         }
-        System.out.print(encrypted);
+        System.out.print(encryptedMessage);
     }
 
     public static void main(String[] args) {
