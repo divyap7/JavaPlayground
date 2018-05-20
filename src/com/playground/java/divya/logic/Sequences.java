@@ -1,5 +1,8 @@
 package com.playground.java.divya.logic;
 
+
+import static jdk.nashorn.internal.runtime.JSType.isNumber;
+
 public class Sequences {
     private void sequence1(int n) {
         for (int i = 1; i <= n; i++) {
@@ -20,11 +23,13 @@ public class Sequences {
         }
     }
 
-
     private void sequence3(int n) {
         for (int i = 1; i <= n; i++) {
-            System.out.print(i +"-"+n+"-");
+            System.out.print(i+"-"+n);
             n--;
+            if(i<n) {
+                System.out.print("-");
+            }
         }
     }
 
