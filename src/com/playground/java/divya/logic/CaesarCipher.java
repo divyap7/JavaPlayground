@@ -4,26 +4,25 @@ public class CaesarCipher {
     private void encode(String word)
 
     {
-        String encryptedMessage = "";
+        StringBuffer result = new StringBuffer();
+
         for (int i = 0; i < word.length(); i++) {
-            int letter = word.charAt(i);
-            if (Character.isUpperCase(letter)) {
-                letter = letter + 3;
-                if (letter > 'Z')
-                    letter = letter - 26;
-            } else if (Character.isLowerCase(letter)) {
-                letter = letter + 3;
-                if (letter > 'z')
-                    letter = letter - 26;
+            if (Character.isUpperCase(word.charAt(i))) {
+                char ch = (char) (((int) word.charAt(i) +
+                        3 - 65) % 26 + 65);
+                result.append(ch);
+            } else {
+                char ch = (char) (((int) word.charAt(i) +
+                        3 - 97) % 26 + 97);
+                result.append(ch);
             }
-            encryptedMessage += (char) letter;
         }
-        System.out.print(encryptedMessage);
+        System.out.println(result);
     }
 
     public static void main(String[] args) {
         CaesarCipher cipher = new CaesarCipher();
-        cipher.encode("xyz");
+        cipher.encode("yza");
 
     }
 }
