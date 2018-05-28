@@ -2,27 +2,41 @@ package com.playground.java.divya.logic;
 
 
 public class StudentGrade {
-    private void grade(int marks) {
+    String grade="";
+    private String grade(int marks) {
+        switch (marks / 10) {
+            case 0:
+            case 1:
+            case 2:
+            case 3:
+            case 4:
+                grade="F grade";
+                break;
+            case 5:
+                grade="E grade";
+                break;
+            case 6:
+                grade="D grade";
+                break;
+            case 7:
+                grade="C grade";
+                break;
+            case 8:
+                grade="B grade";
+                break;
+            case 9:
+                grade="A grade";
+                break;
+            default:
+                System.out.println("Invalid Marks");
 
-        if(marks>=0 && marks<=49){
-            System.out.println("F Grade");
-        }else if (marks>=50 && marks<=59){
-            System.out.println("E Grade");
-        }else if (marks>=60 && marks<=69) {
-            System.out.println("D Grade");
-        }else if (marks>=70 && marks<=79) {
-            System.out.println("C Grade");
-        }else if (marks>=80 && marks<=89) {
-            System.out.println("B Grade");
-        }else if (marks>=90 && marks<=100) {
-            System.out.println("A Grade");
-        }else{
-            System.out.println("Invalid Marks");
         }
+        return grade;
     }
 
     public static void main(String[] args) {
         StudentGrade grade = new StudentGrade();
-        grade.grade(72);
+        grade.grade(99);
+        System.out.println(grade.grade);
     }
 }
