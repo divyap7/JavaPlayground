@@ -11,9 +11,8 @@ public class Sequences {
     }
 
     private void sequence2(int n) {
-        for (int i = n; n >= 1; i--) {
+        for (int i = n; n >= 1; i--,n--) {
             System.out.print(i);
-            n = n - 1;
             for (int j = 1; j < i; j++) {
                 System.out.print(i);
             }
@@ -50,7 +49,6 @@ public class Sequences {
             for (int j = 1; j <= i; j++) {
                 System.out.print(i);
             }
-
             System.out.println();
         }
     }
