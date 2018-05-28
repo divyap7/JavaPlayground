@@ -4,7 +4,7 @@ public class CaesarCipher {
     private void encode(String word)
 
     {
-        StringBuffer result = new StringBuffer();
+        StringBuilder result = new StringBuilder();
 
         for (int i = 0; i < word.length(); i++) {
             if (Character.isUpperCase(word.charAt(i))) {
